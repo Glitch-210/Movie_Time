@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Movie Collection</title>
     <link rel="stylesheet" href="page2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
     <header>
@@ -16,8 +18,21 @@
         <div class="movie-card scroll-animation">
             <img src="movies_photos/Jawan_film_poster.jpg" alt="Movie 1">
             <div class="movie-info">
-                <h3>Jawaan</h3>
+                <div class="movie-header">
+                    <h3>Jawaan</h3>
+                    <button class="like-btn" data-genre="action,thriller">
+                        <i class="fas fa-heart"></i>
+                    </button>
+                </div>
+                <div class="rating">
+                    <span class="stars">★★★★</span>
+                    <span class="rating-text">4.0/5</span>
+                </div>
                 <p>A mind-bending thriller about a solider.</p>
+                <div class="genre-tags">
+                    <span class="tag">Action</span>
+                    <span class="tag">Thriller</span>
+                </div>
                 <button class="watch-btn">Watch Now</button>
             </div>
         </div>
@@ -25,8 +40,22 @@
         <div class="movie-card scroll-animation">
             <img src="movies_photos/yjhd.jpg" alt="Movie 2">
             <div class="movie-info">
-                <h3>Yeh Jawaani Hai Deewani</h3>
+                <div class="movie-header">
+                    <h3>Yeh Jawaani Hai Deewani</h3>
+                    <button class="like-btn" data-genre="romance,drama,comedy">
+                        <i class="fas fa-heart"></i>
+                    </button>
+                </div>
+                <div class="rating">
+                    <span class="stars">★★★★★</span>
+                    <span class="rating-text">4.8/5</span>
+                </div>
                 <p>Story of coolest boy in the city.</p>
+                <div class="genre-tags">
+                    <span class="tag">Romance</span>
+                    <span class="tag">Drama</span>
+                    <span class="tag">Comedy</span>
+                </div>
                 <button class="watch-btn">Watch Now</button>
             </div>
         </div>
@@ -34,8 +63,22 @@
         <div class="movie-card scroll-animation">
             <img src="movies_photos/CH.jpg" alt="Movie 3">
             <div class="movie-info">
-                <h3>Chennai Express</h3>
+                <div class="movie-header">
+                    <h3>Chennai Express</h3>
+                    <button class="like-btn" data-genre="comedy,action,romance">
+                        <i class="fas fa-heart"></i>
+                    </button>
+                </div>
+                <div class="rating">
+                    <span class="stars">★★★★</span>
+                    <span class="rating-text">4.2/5</span>
+                </div>
                 <p>Story of a guy who falls in love with a girl.</p>
+                <div class="genre-tags">
+                    <span class="tag">Comedy</span>
+                    <span class="tag">Action</span>
+                    <span class="tag">Romance</span>
+                </div>
                 <button class="watch-btn">Watch Now</button>
             </div>
         </div>
@@ -43,8 +86,22 @@
         <div class="movie-card scroll-animation">
             <img src="movies_photos/pathaan.jpg" alt="Movie 1">
             <div class="movie-info">
-                <h3>Pathaan</h3>
+                <div class="movie-header">
+                    <h3>Pathaan</h3>
+                    <button class="like-btn" data-genre="action,thriller,spy">
+                        <i class="fas fa-heart"></i>
+                    </button>
+                </div>
+                <div class="rating">
+                    <span class="stars">★★★★½</span>
+                    <span class="rating-text">4.5/5</span>
+                </div>
                 <p>A mind-bending thriller of a spy.</p>
+                <div class="genre-tags">
+                    <span class="tag">Action</span>
+                    <span class="tag">Thriller</span>
+                    <span class="tag">Spy</span>
+                </div>
                 <button class="watch-btn">Watch Now</button>
             </div>
         </div>
@@ -52,8 +109,22 @@
         <div class="movie-card scroll-animation">
             <img src="movies_photos/cp.jpg" alt="Movie 1">
             <div class="movie-info">
-                <h3>Captain America Brave New World</h3>
+                <div class="movie-header">
+                    <h3>Captain America Brave New World</h3>
+                    <button class="like-btn" data-genre="action,scifi,superhero">
+                        <i class="fas fa-heart"></i>
+                    </button>
+                </div>
+                <div class="rating">
+                    <span class="stars">★★★★</span>
+                    <span class="rating-text">4.0/5</span>
+                </div>
                 <p>A sci-fi thriller about a superhero.</p>
+                <div class="genre-tags">
+                    <span class="tag">Action</span>
+                    <span class="tag">Sci-Fi</span>
+                    <span class="tag">Superhero</span>
+                </div>
                 <button class="watch-btn">Watch Now</button>
             </div>
         </div>
@@ -61,11 +132,63 @@
         <div class="movie-card scroll-animation">
             <img src="movies_photos/sikandar.avif" alt="Movie 1">
             <div class="movie-info">
-                <h3>Sikandar</h3>
+                <div class="movie-header">
+                    <h3>Sikandar</h3>
+                    <button class="like-btn" data-genre="drama,action">
+                        <i class="fas fa-heart"></i>
+                    </button>
+                </div>
+                <div class="rating">
+                    <span class="stars">★★★</span>
+                    <span class="rating-text">3.0/5</span>
+                </div>
                 <p>Story Unknown</p>
+                <div class="genre-tags">
+                    <span class="tag">Drama</span>
+                    <span class="tag">Action</span>
+                </div>
                 <button class="watch-btn">Watch Now</button>
             </div>
         </div>
     </div>
+
+    <section id="recommendation-section">
+        <h2>Recommended for You</h2>
+        <div class="movie-container">
+            <!-- Recommendations will be dynamically inserted here -->
+        </div>
+    </section>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollToTopBtn" style="position: fixed; bottom: 20px; right: 20px; display: none; background: none; border: none; cursor: pointer;">
+        <!-- Add your image here -->
+        <img src="movies_photos/arc.webp" alt="Scroll to Top" style="width: 60px; height: 60px; border-radius: 50%;">
+    </button>
+
+    <script>
+        document.querySelectorAll('.like-btn').forEach(button => {
+            button.addEventListener('click', function() {
+                this.classList.toggle('active');
+            });
+        });
+
+        // Scroll to Top functionality
+        $(document).ready(function() {
+            const scrollToTopBtn = $('#scrollToTopBtn');
+
+            $(window).scroll(function() {
+                if ($(window).scrollTop() > 300) {
+                    scrollToTopBtn.fadeIn();
+                } else {
+                    scrollToTopBtn.fadeOut();
+                }
+            });
+
+            scrollToTopBtn.click(function() {
+                $('html, body').animate({ scrollTop: 0 }, 'slow');
+                return false;
+            });
+        });
+    </script>
 </body>
 </html>
